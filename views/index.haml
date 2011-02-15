@@ -1,5 +1,6 @@
 %form{:action => '/create_workout', :method => 'post' }
-  Today I worked out for
+  %input{ :name => 'workout[date]', :value => 'Today' }
+  I worked out for
   %input{ :name => 'workout[duration]' }
   minutes, doing
   %input{ :name => 'workout[type]' }

@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    chronic (0.3.0)
     daemons (1.1.0)
     eventmachine (0.12.10)
     haml (3.0.25)
@@ -24,6 +25,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  chronic
   haml
   sass
   sequel

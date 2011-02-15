@@ -4,6 +4,7 @@ require 'sinatra/sequel'
 require 'sqlite3'
 require 'haml'
 require 'sass'
+require 'chronic'
 
 set :database, 'sqlite://today.db'
 
@@ -27,6 +28,8 @@ get '/' do
 end
 
 post '/create_workout' do
+  puts "#{params.inspect} #{Chronic.parse(params[:workout][:date])}"
+  params[:workout]['date'] = Chronic.parse(params[:workout][:date])
   puts "#{params.inspect}"
   Workout.create(params[:workout])
   redirect '/'
