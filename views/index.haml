@@ -1,0 +1,16 @@
+%form{:action => '/create_workout', :method => 'post' }
+  Today I worked out for
+  %input{ :name => 'workout[duration]' }
+  minutes, doing
+  %input{ :name => 'workout[type]' }
+  and burned
+  %input{ :name => 'workout[calories_burned]' }
+  calories! Now I weigh
+  %input{ :name => 'workout[weight]' }
+  pounds.
+  %input{:type => 'submit' }
+
+%h1 Past workouts:
+%ul
+  - Workout.all.each do |w|
+    %li= w.describe
