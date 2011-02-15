@@ -8,10 +8,6 @@ require 'chronic'
 
 set :database, 'sqlite://today.db'
 
-puts "the workouts table doesn't exist" if !database.table_exists?('workouts')
-
-# define database migrations. pending migrations are run at startup and
-# are guaranteed to run exactly once per database.
 migration "create workouts table" do
   database.create_table :workouts do
     primary_key :id
