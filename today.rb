@@ -1,20 +1,20 @@
 require 'rubygems'
 require 'sinatra'
+require 'mysql2'
 require 'sinatra/sequel'
-require 'sqlite3'
 require 'haml'
 require 'sass'
 require 'chronic'
 
-set :database, 'sqlite://today.db'
+set :database, 'mysql://root:password@localhost/today'
 
 migration "create workouts table" do
   database.create_table :workouts do
     primary_key :id
-    text        :type
-    integer     :duration, :default => 45
+    varchar      :type
+    integer     :duration
     double      :calories_burned
-    double      :weight
+    double     :weight
     timestamp   :date, :null => false
   end
 end
