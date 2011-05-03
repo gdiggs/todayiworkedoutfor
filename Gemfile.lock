@@ -5,7 +5,7 @@ GEM
     daemons (1.1.0)
     eventmachine (0.12.10)
     haml (3.0.25)
-    mysql2 (0.2.6)
+    mysql (2.8.1)
     rack (1.2.1)
     sass (3.1.0.alpha.221)
     sequel (3.20.0)
@@ -27,7 +27,7 @@ PLATFORMS
 DEPENDENCIES
   chronic
   haml
-  mysql2
+  mysql
   sass
   sequel
   sinatra

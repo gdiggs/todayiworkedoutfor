@@ -11,7 +11,7 @@ set :database, 'mysql://root:password@localhost/today'
 migration "create workouts table" do
   database.create_table :workouts do
     primary_key :id
-    varchar(255)      :type
+    varchar      :type
     integer     :duration
     double      :calories_burned
     double     :weight
