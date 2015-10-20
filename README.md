@@ -2,6 +2,7 @@
 ##Keep track of your fitness progress
 
 ###Installation notes
+
 * Before you run for the first time, make sure to `touch today.db`. The migration will be run automatically.
 
 ###License
